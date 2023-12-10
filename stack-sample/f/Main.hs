@@ -1,0 +1,9 @@
+#!/usr/bin/env stack
+{- stack script --resolver lts-21.7 --package Cabal --package Cabal-syntax --package QuickCheck --package adjunctions --package array --package attoparsec --package base --package bifunctors --package binary --package bitvec --package bytestring --package comonad --package containers --package contravariant --package deepseq --package directory --package distributive --package exceptions --package extra --package fgl --package filepath --package free --package ghc-bignum --package ghc-boot-th --package ghc-prim --package hashable --package heaps --package indexed-traversable --package indexed-traversable-instances --package integer-gmp --package integer-logarithms --package kan-extensions --package lens --package linear-base --package list-t --package massiv --package megaparsec --package mono-traversable --package mtl --package mutable-containers --package mwc-random --package parallel --package parsec --package parser-combinators --package pretty --package primitive --package process --package profunctors --package psqueues --package random --package reflection --package regex-tdfa --package safe-exceptions --package scientific --package semialign --package semigroupoids --package split --package stm --package strict --package strict-lens --package tagged --package template-haskell --package text --package tf-random --package these --package these-lens --package time --package transformers --package trifecta --package unboxing-vector --package unix --package unordered-containers --package utility-ht --package vector --package vector-algorithms --package vector-stream --package vector-th-unbox --package xhtml
+--ghc-options "-D DEBUG" -}
+{-# OPTIONS_GHC -Wno-unused-imports -Wno-unused-top-binds -Wno-orphans #-}
+
+main :: IO ()
+main = do
+  putStrLn "TODO"
+

@@ -23,45 +23,632 @@ source-repository head
   type: git
   location: https://github.com/githubuser/stack-sample
 
-library
-  exposed-modules:
-      Lib
-  other-modules:
-      Paths_stack_sample
-  autogen-modules:
-      Paths_stack_sample
-  hs-source-dirs:
-      src
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
-  build-depends:
-      base >=4.7 && <5
-  default-language: Haskell2010
-
-executable stack-sample-exe
+executable a-exe
   main-is: Main.hs
   other-modules:
       Paths_stack_sample
   autogen-modules:
       Paths_stack_sample
   hs-source-dirs:
-      app
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+      a
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
-      base >=4.7 && <5
-    , stack-sample
-  default-language: Haskell2010
+      Cabal
+    , Cabal-syntax
+    , QuickCheck
+    , adjunctions
+    , array
+    , attoparsec
+    , base
+    , bifunctors
+    , binary
+    , bitvec
+    , bytestring
+    , comonad
+    , containers
+    , contravariant
+    , deepseq
+    , directory
+    , distributive
+    , exceptions
+    , extra
+    , fgl
+    , filepath
+    , free
+    , ghc-bignum
+    , ghc-boot-th
+    , ghc-prim
+    , hashable
+    , heaps
+    , indexed-traversable
+    , indexed-traversable-instances
+    , integer-gmp
+    , integer-logarithms
+    , kan-extensions
+    , lens
+    , linear-base
+    , list-t
+    , massiv
+    , megaparsec
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , parser-combinators
+    , pretty
+    , primitive
+    , process
+    , profunctors
+    , psqueues
+    , random
+    , reflection
+    , regex-tdfa
+    , safe-exceptions
+    , scientific
+    , semialign
+    , semigroupoids
+    , split
+    , stm
+    , strict
+    , strict-lens
+    , tagged
+    , template-haskell
+    , text
+    , tf-random
+    , these
+    , these-lens
+    , time
+    , transformers
+    , trifecta
+    , unboxing-vector
+    , unix
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-stream
+    , vector-th-unbox
+    , xhtml
+  default-language: GHC2021
 
-test-suite stack-sample-test
-  type: exitcode-stdio-1.0
-  main-is: Spec.hs
+executable b-exe
+  main-is: Main.hs
   other-modules:
       Paths_stack_sample
   autogen-modules:
       Paths_stack_sample
   hs-source-dirs:
-      test
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+      b
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
-      base >=4.7 && <5
-    , stack-sample
-  default-language: Haskell2010
+      Cabal
+    , Cabal-syntax
+    , QuickCheck
+    , adjunctions
+    , array
+    , attoparsec
+    , base
+    , bifunctors
+    , binary
+    , bitvec
+    , bytestring
+    , comonad
+    , containers
+    , contravariant
+    , deepseq
+    , directory
+    , distributive
+    , exceptions
+    , extra
+    , fgl
+    , filepath
+    , free
+    , ghc-bignum
+    , ghc-boot-th
+    , ghc-prim
+    , hashable
+    , heaps
+    , indexed-traversable
+    , indexed-traversable-instances
+    , integer-gmp
+    , integer-logarithms
+    , kan-extensions
+    , lens
+    , linear-base
+    , list-t
+    , massiv
+    , megaparsec
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , parser-combinators
+    , pretty
+    , primitive
+    , process
+    , profunctors
+    , psqueues
+    , random
+    , reflection
+    , regex-tdfa
+    , safe-exceptions
+    , scientific
+    , semialign
+    , semigroupoids
+    , split
+    , stm
+    , strict
+    , strict-lens
+    , tagged
+    , template-haskell
+    , text
+    , tf-random
+    , these
+    , these-lens
+    , time
+    , transformers
+    , trifecta
+    , unboxing-vector
+    , unix
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-stream
+    , vector-th-unbox
+    , xhtml
+  default-language: GHC2021
+
+executable c-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_stack_sample
+  autogen-modules:
+      Paths_stack_sample
+  hs-source-dirs:
+      c
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      Cabal
+    , Cabal-syntax
+    , QuickCheck
+    , adjunctions
+    , array
+    , attoparsec
+    , base
+    , bifunctors
+    , binary
+    , bitvec
+    , bytestring
+    , comonad
+    , containers
+    , contravariant
+    , deepseq
+    , directory
+    , distributive
+    , exceptions
+    , extra
+    , fgl
+    , filepath
+    , free
+    , ghc-bignum
+    , ghc-boot-th
+    , ghc-prim
+    , hashable
+    , heaps
+    , indexed-traversable
+    , indexed-traversable-instances
+    , integer-gmp
+    , integer-logarithms
+    , kan-extensions
+    , lens
+    , linear-base
+    , list-t
+    , massiv
+    , megaparsec
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , parser-combinators
+    , pretty
+    , primitive
+    , process
+    , profunctors
+    , psqueues
+    , random
+    , reflection
+    , regex-tdfa
+    , safe-exceptions
+    , scientific
+    , semialign
+    , semigroupoids
+    , split
+    , stm
+    , strict
+    , strict-lens
+    , tagged
+    , template-haskell
+    , text
+    , tf-random
+    , these
+    , these-lens
+    , time
+    , transformers
+    , trifecta
+    , unboxing-vector
+    , unix
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-stream
+    , vector-th-unbox
+    , xhtml
+  default-language: GHC2021
+
+executable d-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_stack_sample
+  autogen-modules:
+      Paths_stack_sample
+  hs-source-dirs:
+      d
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      Cabal
+    , Cabal-syntax
+    , QuickCheck
+    , adjunctions
+    , array
+    , attoparsec
+    , base
+    , bifunctors
+    , binary
+    , bitvec
+    , bytestring
+    , comonad
+    , containers
+    , contravariant
+    , deepseq
+    , directory
+    , distributive
+    , exceptions
+    , extra
+    , fgl
+    , filepath
+    , free
+    , ghc-bignum
+    , ghc-boot-th
+    , ghc-prim
+    , hashable
+    , heaps
+    , indexed-traversable
+    , indexed-traversable-instances
+    , integer-gmp
+    , integer-logarithms
+    , kan-extensions
+    , lens
+    , linear-base
+    , list-t
+    , massiv
+    , megaparsec
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , parser-combinators
+    , pretty
+    , primitive
+    , process
+    , profunctors
+    , psqueues
+    , random
+    , reflection
+    , regex-tdfa
+    , safe-exceptions
+    , scientific
+    , semialign
+    , semigroupoids
+    , split
+    , stm
+    , strict
+    , strict-lens
+    , tagged
+    , template-haskell
+    , text
+    , tf-random
+    , these
+    , these-lens
+    , time
+    , transformers
+    , trifecta
+    , unboxing-vector
+    , unix
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-stream
+    , vector-th-unbox
+    , xhtml
+  default-language: GHC2021
+
+executable e-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_stack_sample
+  autogen-modules:
+      Paths_stack_sample
+  hs-source-dirs:
+      e
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      Cabal
+    , Cabal-syntax
+    , QuickCheck
+    , adjunctions
+    , array
+    , attoparsec
+    , base
+    , bifunctors
+    , binary
+    , bitvec
+    , bytestring
+    , comonad
+    , containers
+    , contravariant
+    , deepseq
+    , directory
+    , distributive
+    , exceptions
+    , extra
+    , fgl
+    , filepath
+    , free
+    , ghc-bignum
+    , ghc-boot-th
+    , ghc-prim
+    , hashable
+    , heaps
+    , indexed-traversable
+    , indexed-traversable-instances
+    , integer-gmp
+    , integer-logarithms
+    , kan-extensions
+    , lens
+    , linear-base
+    , list-t
+    , massiv
+    , megaparsec
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , parser-combinators
+    , pretty
+    , primitive
+    , process
+    , profunctors
+    , psqueues
+    , random
+    , reflection
+    , regex-tdfa
+    , safe-exceptions
+    , scientific
+    , semialign
+    , semigroupoids
+    , split
+    , stm
+    , strict
+    , strict-lens
+    , tagged
+    , template-haskell
+    , text
+    , tf-random
+    , these
+    , these-lens
+    , time
+    , transformers
+    , trifecta
+    , unboxing-vector
+    , unix
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-stream
+    , vector-th-unbox
+    , xhtml
+  default-language: GHC2021
+
+executable f-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_stack_sample
+  autogen-modules:
+      Paths_stack_sample
+  hs-source-dirs:
+      f
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      Cabal
+    , Cabal-syntax
+    , QuickCheck
+    , adjunctions
+    , array
+    , attoparsec
+    , base
+    , bifunctors
+    , binary
+    , bitvec
+    , bytestring
+    , comonad
+    , containers
+    , contravariant
+    , deepseq
+    , directory
+    , distributive
+    , exceptions
+    , extra
+    , fgl
+    , filepath
+    , free
+    , ghc-bignum
+    , ghc-boot-th
+    , ghc-prim
+    , hashable
+    , heaps
+    , indexed-traversable
+    , indexed-traversable-instances
+    , integer-gmp
+    , integer-logarithms
+    , kan-extensions
+    , lens
+    , linear-base
+    , list-t
+    , massiv
+    , megaparsec
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , parser-combinators
+    , pretty
+    , primitive
+    , process
+    , profunctors
+    , psqueues
+    , random
+    , reflection
+    , regex-tdfa
+    , safe-exceptions
+    , scientific
+    , semialign
+    , semigroupoids
+    , split
+    , stm
+    , strict
+    , strict-lens
+    , tagged
+    , template-haskell
+    , text
+    , tf-random
+    , these
+    , these-lens
+    , time
+    , transformers
+    , trifecta
+    , unboxing-vector
+    , unix
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-stream
+    , vector-th-unbox
+    , xhtml
+  default-language: GHC2021
+
+executable g-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_stack_sample
+  autogen-modules:
+      Paths_stack_sample
+  hs-source-dirs:
+      g
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      Cabal
+    , Cabal-syntax
+    , QuickCheck
+    , adjunctions
+    , array
+    , attoparsec
+    , base
+    , bifunctors
+    , binary
+    , bitvec
+    , bytestring
+    , comonad
+    , containers
+    , contravariant
+    , deepseq
+    , directory
+    , distributive
+    , exceptions
+    , extra
+    , fgl
+    , filepath
+    , free
+    , ghc-bignum
+    , ghc-boot-th
+    , ghc-prim
+    , hashable
+    , heaps
+    , indexed-traversable
+    , indexed-traversable-instances
+    , integer-gmp
+    , integer-logarithms
+    , kan-extensions
+    , lens
+    , linear-base
+    , list-t
+    , massiv
+    , megaparsec
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , parser-combinators
+    , pretty
+    , primitive
+    , process
+    , profunctors
+    , psqueues
+    , random
+    , reflection
+    , regex-tdfa
+    , safe-exceptions
+    , scientific
+    , semialign
+    , semigroupoids
+    , split
+    , stm
+    , strict
+    , strict-lens
+    , tagged
+    , template-haskell
+    , text
+    , tf-random
+    , these
+    , these-lens
+    , time
+    , transformers
+    , trifecta
+    , unboxing-vector
+    , unix
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-stream
+    , vector-th-unbox
+    , xhtml
+  default-language: GHC2021

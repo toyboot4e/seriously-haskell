@@ -1,0 +1,22 @@
+cradle:
+  stack:
+    - path: "./a/Main.hs"
+      component: "stack-sample:exe:a-exe"
+
+    - path: "./b/Main.hs"
+      component: "stack-sample:exe:b-exe"
+
+    - path: "./c/Main.hs"
+      component: "stack-sample:exe:c-exe"
+
+    - path: "./d/Main.hs"
+      component: "stack-sample:exe:d-exe"
+
+    - path: "./e/Main.hs"
+      component: "stack-sample:exe:e-exe"
+
+    - path: "./f/Main.hs"
+      component: "stack-sample:exe:f-exe"
+
+    - path: "./g/Main.hs"
+      component: "stack-sample:exe:g-exe"
