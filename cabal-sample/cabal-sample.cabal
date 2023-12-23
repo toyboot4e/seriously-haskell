@@ -102,7 +102,42 @@ flag atcoder
   default:     False
   manual:      True
 
-executable cabal-sample
+executable script-example-exe
     import:           common-definitions
     main-is:          Main.hs
-    hs-source-dirs:   app
+    hs-source-dirs:   ScriptExample
+
+executable a-exe
+    import:           common-definitions
+    main-is:          Main.hs
+    hs-source-dirs:   a
+
+executable b-exe
+    import:           common-definitions
+    main-is:          Main.hs
+    hs-source-dirs:   b
+
+executable c-exe
+    import:           common-definitions
+    main-is:          Main.hs
+    hs-source-dirs:   c
+
+executable d-exe
+    import:           common-definitions
+    main-is:          Main.hs
+    hs-source-dirs:   d
+
+executable e-exe
+    import:           common-definitions
+    main-is:          Main.hs
+    hs-source-dirs:   e
+
+executable f-exe
+    import:           common-definitions
+    main-is:          Main.hs
+    hs-source-dirs:   f
+
+executable g-exe
+    import:           common-definitions
+    main-is:          Main.hs
+    hs-source-dirs:   g
