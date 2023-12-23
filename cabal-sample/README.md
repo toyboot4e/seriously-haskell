@@ -1,8 +1,20 @@
 # cabal-sample
 
+Cabal のサンプルプロジェクトです。  A ~ G 問題までの 7 問を想定したプロジェクト構成となっています。
+
+## プロジェクトファイル
+
+`cabal init` 時点で以下のファイルが生成されます:
+
+- `cabal-sample.cabal`
+
+`cabal.project` を追加しても良いかもしれません。
+
 ## 操作方法
 
 ### REPL の実行
+
+`cabal repl` で `Main.hs` を読み込んだ REPL を起動できます:
 
 ```sh
 $ stack repl a/Main.hs
@@ -21,15 +33,19 @@ app/Main.hs in the executable cabal-sample.
 
 ### コンパイル実行
 
+`cabal run` で実行できます:
+
 ```hs
 $ cabal run a-exe
 ```
 
-### `doctest` の実行
+### [`doctest`] の実行
 
-TODO: 書く
+Cabal の REPL から [`doctest`] を実行できます:
 
 ```hs
-$ cabal repl
+$ cabal repl --with-ghc=doctest --repl-options='-w -Wdefault' a-exe
 ```
+
+[`doctest`]: https://github.com/doctest/doctest
 

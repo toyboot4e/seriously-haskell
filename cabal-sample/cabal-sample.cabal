@@ -102,7 +102,7 @@ flag atcoder
   default:     False
   manual:      True
 
-executable script-example-exe
+executable app-exe
     import:           common-definitions
     main-is:          Main.hs
     hs-source-dirs:   ScriptExample
