@@ -20,7 +20,7 @@ https://toyboot4e.github.io/seriously-haskell/
 
 ## [`tasty-bench`] によるベンチマークテストの方法
 
-[./benchmarks.cabal](./benchmarks.cabal) を以下の形に編集してください:
+[./benchmarks.cabal](./benchmarks.cabal) を以下の形に編集してください。他のソースは編集不要です:
 
 ```sh
 benchmark bench
@@ -77,4 +77,8 @@ All.knapsack.sparse-mono-unboxed-vector: ▇▇▇▇▇▇▇▇▇▇▇▇▇
                                          .           .           .           .           .           .           .
                                          1μs         10μs        100μs       1ms         10ms        100ms       1s
 ```
+
+[`tasty-bench`]: https://github.com/Bodigrim/tasty-bench
+[`criterion`]: https://github.com/haskell/criterion
+
 
