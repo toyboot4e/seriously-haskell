@@ -113,6 +113,12 @@ library
   exposed-modules:
     Knapsack
 
+executable main
+  import:         deps
+  hs-source-dirs: app
+  main-is:        Main.hs
+  build-depends:  benchmarks
+
 benchmark bench
   import:         deps
   type:           exitcode-stdio-1.0
