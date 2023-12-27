@@ -46,7 +46,7 @@ $ cabal bench --benchmark-options='--svg a.svg +RTS -T'
 
 ただし時間軸を対数スケールにすることはできません:
 
-![tasty-bench の出力 (SVG 画像)](./output/tasty-bench.png)
+![tasty-bench の出力 (SVG 画像)](./output/a.svg)
 
 ### ターミナル出力 (対数時間でプロット)
 
